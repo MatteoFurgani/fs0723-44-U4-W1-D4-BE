@@ -34,6 +34,12 @@ public class Main {
             System.out.println("Dipartimento: " + dipendente.getDipartimento());
             System.out.println("------------------------------");
         }
+        System.out.println("Volontario: " + volontario1.getNome());
+        System.out.println("Matricola n. " + volontario1.getMatricola());
+        System.out.println(volontario1.getCv());
+        System.out.println("Stipendio: " + volontario1.calculateSalary());
+        System.out.println("Dipartimento: " + volontario1.getDipartimento());
+        System.out.println("------------------------------");
         System.out.println("Stipendi totali: " + stipendiTotali);
 
     }

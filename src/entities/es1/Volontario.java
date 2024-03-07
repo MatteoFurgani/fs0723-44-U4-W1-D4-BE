@@ -13,6 +13,16 @@ public class Volontario extends Dipendente {
         this.cv = cv;
     }
 
+    public String getNome() {
+        return nome;
+    }
+    public int getEta() {
+        return eta;
+    }
+    public String getCv() {
+        return cv;
+    }
+
     private static int generaMatricola() {
         Random rndm = new Random();
         return rndm.nextInt(100) + 1;
@@ -20,7 +30,7 @@ public class Volontario extends Dipendente {
 
     @Override
     public double calculateSalary() {
-        return 0;
+        return 600;
     }
 
     @Override
