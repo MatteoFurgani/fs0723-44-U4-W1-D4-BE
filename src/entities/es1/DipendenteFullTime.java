@@ -17,4 +17,9 @@ public class DipendenteFullTime extends Dipendente {
     public double calculateSalary() {
         return stipendioMensile;
     }
+
+    @Override
+    public void checkIn() {
+        System.out.println("Il Responsabile matricola n. " + matricola + " ha iniziato il suo turno di lavoro.");
+    }
 }

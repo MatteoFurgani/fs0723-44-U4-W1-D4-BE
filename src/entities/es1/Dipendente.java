@@ -1,8 +1,9 @@
 package entities.es1;
 import entities.es1.Dipartimento;
 import java.util.Random;
+import interfaces.CheckIn;
 
-public abstract class Dipendente {
+public abstract class Dipendente implements CheckIn {
     protected   int matricola;
     protected double stipendio;
     protected Dipartimento dipartimento;

@@ -17,4 +17,9 @@ public class DipendentePartTime extends Dipendente {
     public double calculateSalary() {
         return oreLavorate * salarioOrario;
     }
+
+    @Override
+    public void checkIn() {
+        System.out.println("Il Dipendente matricola n.  " + matricola + " ha iniziato il suo turno di lavoro.");
+    }
 }

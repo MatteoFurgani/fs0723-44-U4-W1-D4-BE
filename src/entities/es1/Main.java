@@ -10,8 +10,22 @@ public class Main {
         Dipendente dipendente1 = new DipendenteFullTime(matricola, 1500, Dipartimento.PRODUZIONE);
         Dipendente dipendente2 = new Dirigente(matricola, 70000, Dipartimento.AMMINISTRAZIONE);
         Dipendente dipendente3 = new DipendentePartTime(matricola, 102, 10, Dipartimento.VENDITE);
+        Volontario volontario1 = new Volontario("Marco", 25, "Prima esperienza", Dipartimento.VENDITE);
 
-        Dipendente[] dipendenti = { dipendente1, dipendente2, dipendente3 };
+        Dipendente[] dipendenti = { dipendente1, dipendente2, dipendente3, volontario1 };
+
+        for (int i = 0; i < dipendenti.length; i++) {
+            dipendenti[i].checkIn();
+        }
+
+        double stipendiTotali = 0.0;
+        for (int i = 0; i < dipendenti.length; i++) {
+            Dipendente dipendente = dipendenti[i];
+            stipendiTotali += dipendente.calculateSalary();
+        }
+
+
+
 
         for (int i = 0; i < dipendenti.length; i++) {
             Dipendente dipendente = dipendenti[i];
@@ -20,5 +34,7 @@ public class Main {
             System.out.println("Dipartimento: " + dipendente.getDipartimento());
             System.out.println("------------------------------");
         }
+        System.out.println("Stipendi totali: " + stipendiTotali);
+
     }
 }

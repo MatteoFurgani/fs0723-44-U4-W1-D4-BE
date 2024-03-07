@@ -14,4 +14,10 @@ public class Dirigente extends Dipendente {
     public double calculateSalary() {
         return salarioAnnuo / 12;
     }
+
+    @Override
+    public void checkIn() {
+        System.out.println("Il Dirigente matricola n. " + matricola + " ha iniziato il suo turno di lavoro.");
+
+    }
 }
